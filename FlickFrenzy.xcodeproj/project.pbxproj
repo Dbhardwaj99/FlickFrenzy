@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C121D7172B3C1B1500EA46C9 /* FlickFrenzyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7162B3C1B1500EA46C9 /* FlickFrenzyApp.swift */; };
+		C121D7192B3C1B1500EA46C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7182B3C1B1500EA46C9 /* ContentView.swift */; };
+		C121D71B2B3C1B1700EA46C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C121D71A2B3C1B1700EA46C9 /* Assets.xcassets */; };
+		C121D71E2B3C1B1700EA46C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C121D71D2B3C1B1700EA46C9 /* Preview Assets.xcassets */; };
+		C121D7282B3C1B1700EA46C9 /* FlickFrenzyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7272B3C1B1700EA46C9 /* FlickFrenzyTests.swift */; };
+		C121D7322B3C1B1700EA46C9 /* FlickFrenzyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7312B3C1B1700EA46C9 /* FlickFrenzyUITests.swift */; };
+		C121D7342B3C1B1700EA46C9 /* FlickFrenzyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7332B3C1B1700EA46C9 /* FlickFrenzyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C121D7242B3C1B1700EA46C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C121D70B2B3C1B1500EA46C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C121D7122B3C1B1500EA46C9;
+			remoteInfo = FlickFrenzy;
+		};
+		C121D72E2B3C1B1700EA46C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C121D70B2B3C1B1500EA46C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C121D7122B3C1B1500EA46C9;
+			remoteInfo = FlickFrenzy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C121D7132B3C1B1500EA46C9 /* FlickFrenzy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickFrenzy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C121D7162B3C1B1500EA46C9 /* FlickFrenzyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickFrenzyApp.swift; sourceTree = "<group>"; };
+		C121D7182B3C1B1500EA46C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C121D71A2B3C1B1700EA46C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C121D71D2B3C1B1700EA46C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C121D7232B3C1B1700EA46C9 /* FlickFrenzyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickFrenzyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C121D7272B3C1B1700EA46C9 /* FlickFrenzyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickFrenzyTests.swift; sourceTree = "<group>"; };
+		C121D72D2B3C1B1700EA46C9 /* FlickFrenzyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickFrenzyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C121D7312B3C1B1700EA46C9 /* FlickFrenzyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickFrenzyUITests.swift; sourceTree = "<group>"; };
+		C121D7332B3C1B1700EA46C9 /* FlickFrenzyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickFrenzyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C121D7102B3C1B1500EA46C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D7202B3C1B1700EA46C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D72A2B3C1B1700EA46C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C121D70A2B3C1B1500EA46C9 = {
+			isa = PBXGroup;
+			children = (
+				C121D7152B3C1B1500EA46C9 /* FlickFrenzy */,
+				C121D7262B3C1B1700EA46C9 /* FlickFrenzyTests */,
+				C121D7302B3C1B1700EA46C9 /* FlickFrenzyUITests */,
+				C121D7142B3C1B1500EA46C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C121D7142B3C1B1500EA46C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7132B3C1B1500EA46C9 /* FlickFrenzy.app */,
+				C121D7232B3C1B1700EA46C9 /* FlickFrenzyTests.xctest */,
+				C121D72D2B3C1B1700EA46C9 /* FlickFrenzyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C121D7152B3C1B1500EA46C9 /* FlickFrenzy */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7162B3C1B1500EA46C9 /* FlickFrenzyApp.swift */,
+				C121D7182B3C1B1500EA46C9 /* ContentView.swift */,
+				C121D71A2B3C1B1700EA46C9 /* Assets.xcassets */,
+				C121D71C2B3C1B1700EA46C9 /* Preview Content */,
+			);
+			path = FlickFrenzy;
+			sourceTree = "<group>";
+		};
+		C121D71C2B3C1B1700EA46C9 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C121D71D2B3C1B1700EA46C9 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C121D7262B3C1B1700EA46C9 /* FlickFrenzyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7272B3C1B1700EA46C9 /* FlickFrenzyTests.swift */,
+			);
+			path = FlickFrenzyTests;
+			sourceTree = "<group>";
+		};
+		C121D7302B3C1B1700EA46C9 /* FlickFrenzyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C121D7312B3C1B1700EA46C9 /* FlickFrenzyUITests.swift */,
+				C121D7332B3C1B1700EA46C9 /* FlickFrenzyUITestsLaunchTests.swift */,
+			);
+			path = FlickFrenzyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C121D7122B3C1B1500EA46C9 /* FlickFrenzy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C121D7372B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzy" */;
+			buildPhases = (
+				C121D70F2B3C1B1500EA46C9 /* Sources */,
+				C121D7102B3C1B1500EA46C9 /* Frameworks */,
+				C121D7112B3C1B1500EA46C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlickFrenzy;
+			productName = FlickFrenzy;
+			productReference = C121D7132B3C1B1500EA46C9 /* FlickFrenzy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C121D7222B3C1B1700EA46C9 /* FlickFrenzyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C121D73A2B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzyTests" */;
+			buildPhases = (
+				C121D71F2B3C1B1700EA46C9 /* Sources */,
+				C121D7202B3C1B1700EA46C9 /* Frameworks */,
+				C121D7212B3C1B1700EA46C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C121D7252B3C1B1700EA46C9 /* PBXTargetDependency */,
+			);
+			name = FlickFrenzyTests;
+			productName = FlickFrenzyTests;
+			productReference = C121D7232B3C1B1700EA46C9 /* FlickFrenzyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C121D72C2B3C1B1700EA46C9 /* FlickFrenzyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C121D73D2B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzyUITests" */;
+			buildPhases = (
+				C121D7292B3C1B1700EA46C9 /* Sources */,
+				C121D72A2B3C1B1700EA46C9 /* Frameworks */,
+				C121D72B2B3C1B1700EA46C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C121D72F2B3C1B1700EA46C9 /* PBXTargetDependency */,
+			);
+			name = FlickFrenzyUITests;
+			productName = FlickFrenzyUITests;
+			productReference = C121D72D2B3C1B1700EA46C9 /* FlickFrenzyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C121D70B2B3C1B1500EA46C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					C121D7122B3C1B1500EA46C9 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+					C121D7222B3C1B1700EA46C9 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = C121D7122B3C1B1500EA46C9;
+					};
+					C121D72C2B3C1B1700EA46C9 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = C121D7122B3C1B1500EA46C9;
+					};
+				};
+			};
+			buildConfigurationList = C121D70E2B3C1B1500EA46C9 /* Build configuration list for PBXProject "FlickFrenzy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C121D70A2B3C1B1500EA46C9;
+			productRefGroup = C121D7142B3C1B1500EA46C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C121D7122B3C1B1500EA46C9 /* FlickFrenzy */,
+				C121D7222B3C1B1700EA46C9 /* FlickFrenzyTests */,
+				C121D72C2B3C1B1700EA46C9 /* FlickFrenzyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C121D7112B3C1B1500EA46C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C121D71E2B3C1B1700EA46C9 /* Preview Assets.xcassets in Resources */,
+				C121D71B2B3C1B1700EA46C9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D7212B3C1B1700EA46C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D72B2B3C1B1700EA46C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C121D70F2B3C1B1500EA46C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C121D7192B3C1B1500EA46C9 /* ContentView.swift in Sources */,
+				C121D7172B3C1B1500EA46C9 /* FlickFrenzyApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D71F2B3C1B1700EA46C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C121D7282B3C1B1700EA46C9 /* FlickFrenzyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C121D7292B3C1B1700EA46C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C121D7342B3C1B1700EA46C9 /* FlickFrenzyUITestsLaunchTests.swift in Sources */,
+				C121D7322B3C1B1700EA46C9 /* FlickFrenzyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C121D7252B3C1B1700EA46C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C121D7122B3C1B1500EA46C9 /* FlickFrenzy */;
+			targetProxy = C121D7242B3C1B1700EA46C9 /* PBXContainerItemProxy */;
+		};
+		C121D72F2B3C1B1700EA46C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C121D7122B3C1B1500EA46C9 /* FlickFrenzy */;
+			targetProxy = C121D72E2B3C1B1700EA46C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C121D7352B3C1B1700EA46C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C121D7362B3C1B1700EA46C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C121D7382B3C1B1700EA46C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FlickFrenzy/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C121D7392B3C1B1700EA46C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FlickFrenzy/Preview Content\"";
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C121D73B2B3C1B1700EA46C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickFrenzy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlickFrenzy";
+			};
+			name = Debug;
+		};
+		C121D73C2B3C1B1700EA46C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlickFrenzy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlickFrenzy";
+			};
+			name = Release;
+		};
+		C121D73E2B3C1B1700EA46C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlickFrenzy;
+			};
+			name = Debug;
+		};
+		C121D73F2B3C1B1700EA46C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Q398HUTA3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = divyansh.FlickFrenzyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlickFrenzy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C121D70E2B3C1B1500EA46C9 /* Build configuration list for PBXProject "FlickFrenzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C121D7352B3C1B1700EA46C9 /* Debug */,
+				C121D7362B3C1B1700EA46C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C121D7372B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C121D7382B3C1B1700EA46C9 /* Debug */,
+				C121D7392B3C1B1700EA46C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C121D73A2B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C121D73B2B3C1B1700EA46C9 /* Debug */,
+				C121D73C2B3C1B1700EA46C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C121D73D2B3C1B1700EA46C9 /* Build configuration list for PBXNativeTarget "FlickFrenzyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C121D73E2B3C1B1700EA46C9 /* Debug */,
+				C121D73F2B3C1B1700EA46C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C121D70B2B3C1B1500EA46C9 /* Project object */;
+}
