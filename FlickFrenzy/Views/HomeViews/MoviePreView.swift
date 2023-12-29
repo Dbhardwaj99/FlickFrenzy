@@ -10,6 +10,7 @@ import SwiftUI
 struct MoviePreView: View {
     let intwidthh: CGFloat
     let movie: MovieDetail
+    @ObservedObject var accountViewModel: AccountViewModel
     var body: some View {
         VStack{
             GeometryReader { geometry in
@@ -35,8 +36,13 @@ struct MoviePreView: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.8)
                 Spacer()
-                Image(systemName: "heart.fill")
-                    .foregroundColor(.red)
+                if accountViewModel.user.watchList.contains(where: { $0.movieDetail.id == movie.id }) {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                }else{
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.gray)
+                }
             }
             .padding(.horizontal)
             Spacer()
@@ -85,5 +91,5 @@ func convertToKs(number: Int) -> String{
 
 
 #Preview {
-    MoviePreView(intwidthh: 200, movie: mockMovieDetail)
+    MoviePreView(intwidthh: 200, movie: mockMovieDetail, accountViewModel: AccountViewModel())
 }

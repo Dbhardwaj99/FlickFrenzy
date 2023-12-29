@@ -45,7 +45,7 @@ struct AlertContext{
                                           message: Text("Something is wrong with the data you provided, please check!"))
     
     //Marks: -Order Alerts
-    static let orderPlaced = AlertItem(title: Text("Order Placed!"),
-                                          message: Text("Chillax, We will deliver your order shortly to your address"))
+    static let movieAdded = AlertItem(title: Text("Movie added to your WatchList"),
+                                          message: Text("You can access the movies from the Favourite Tab!"))
 }
 

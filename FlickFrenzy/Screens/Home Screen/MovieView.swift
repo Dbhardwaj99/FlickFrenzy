@@ -9,23 +9,23 @@ import SwiftUI
 
 struct MovieView: View {
     @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var accountViewModel: AccountViewModel
     
     var movie: MovieDetailResponse {
-            if let movie = viewModel.movie {
-                return movie
-            } else {
-                return mockMovieDetailResponses
-            }
+        if let movie = viewModel.movie {
+            return movie
+        } else {
+            return mockMovieDetailResponses
         }
-        
+    }
+    
     var movieCast: [CastDetail]{
         return viewModel.movieCast
     }
     
-//    @Binding var isMovieViewActive: Bool
-//    var movie: MovieDetailResponse
-//    var movieCast: [CastDetail] = []
-    
+    var newMovieItem: userFav {
+        return userFav(movieDetail: movie, castDetail: movieCast)
+    }
     
     @State var wantSeeMore:Bool = false
     
@@ -98,11 +98,25 @@ struct MovieView: View {
                     if movie.overview == ""{
                         
                     }else{
-                        topicHeader(title: "About film")
-                            .frame(height: 30)
-                            .onTapGesture {
-                                wantSeeMore = true
-                            }
+                        HStack{
+                            Text("About film")
+                                .font(.title2)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            Spacer()
+                            Text("See all")
+                                .font(.caption)
+                                .fontWeight(.semibold)
+                                .underline()
+                                .onTapGesture {
+                                    viewModel.isSeeMore = true
+                                }
+                        }
+                        .padding(.horizontal)
+                        .padding(.top)
+                        .frame(height: 30)
+                        .onTapGesture {
+                            wantSeeMore = true
+                        }
                         
                         Text(movie.overview ?? "")
                             .font(.system(size: wantSeeMore ? 18 : 25))
@@ -114,9 +128,18 @@ struct MovieView: View {
                             .padding(.all)
                     }
                     
-                    topicHeader(title: "Cast & Crew")
-                        .frame(height: 30)
-                        .padding(.bottom)
+                    HStack{
+                        Text("Cast & Crew")
+                            .font(.title2)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    .padding(.top)
+                    .frame(height: 30)
+                    .onTapGesture {
+                        wantSeeMore = true
+                    }
                     castColumnView(casts: movieCast)
                     
                     
@@ -159,7 +182,11 @@ struct MovieView: View {
                     
                     Spacer()
                     Button(action: {
-
+                        if !accountViewModel.user.watchList.contains(where: { $0.movieDetail.id == newMovieItem.movieDetail.id }) {
+                            accountViewModel.user.watchList.append(newMovieItem)
+                        }
+                        accountViewModel.showingAlert = true
+                        accountViewModel.saveChanges()
                     }) {
                         Text("Add to watchlist")
                             .fontWeight(.bold)
@@ -168,10 +195,32 @@ struct MovieView: View {
                             .cornerRadius(20)
                             .foregroundStyle(Color.black)
                     }
+                    .alert(isPresented: $accountViewModel.showingAlert){
+                        Alert(
+                            title: Text("Movie added to your WatchList"),
+                            message: Text("You can access the movies from the Favourite Tab!")
+                        )
+                    }
+                    
                     Spacer()
                 }
             }
             .ignoresSafeArea()
+            
+            VStack {
+                HStack{
+                    Image(systemName: "arrow.left.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40, alignment: .topLeading)
+                        .onTapGesture {
+                            viewModel.isMovieViewActive = false
+                        }
+                    Spacer()
+                }
+                .padding()
+                Spacer()
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.white)
@@ -179,7 +228,7 @@ struct MovieView: View {
 }
 
 #Preview {
-    MovieView(viewModel: HomeViewModel())
+    MovieView(viewModel: HomeViewModel(), accountViewModel: AccountViewModel())
 }
 
 

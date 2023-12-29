@@ -20,7 +20,13 @@ class HomeViewModel: ObservableObject {
     @Published var movieId: Int = 282
     @Published var isMovieViewActive: Bool = false
     
+    @Published var isSeeMore: Bool = false
+    @Published var columnTitle: String = "🍿Movies"
+    @Published var movieArray: [MovieDetail] = []
+    
+    
     @Published var selectedMovieId: Int?
+    
     
     init() {
             // Initialize any properties or setup code here if needed.

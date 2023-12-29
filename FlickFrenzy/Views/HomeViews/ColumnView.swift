@@ -12,15 +12,16 @@ struct columnView: View {
     let intwidthh: CGFloat
     @ObservedObject var viewModel: HomeViewModel
     let movieArray: [MovieDetail]
+    @ObservedObject var accountViewModel: AccountViewModel
     
     var body: some View {
         VStack {
-            topicHeader(title: columnTitle)
+            topicHeader(viewModel: viewModel, movieArray: movieArray, title: columnTitle)
             
             ScrollView(.horizontal) {
                 LazyHStack(alignment: .top) {
                     ForEach(movieArray) { movie in
-                        MoviePreView(intwidthh: intwidthh, movie: movie)
+                        MoviePreView(intwidthh: intwidthh, movie: movie, accountViewModel: accountViewModel)
                             .id(movie.movieid)
                             .onTapGesture {
                                 viewModel.selectedMovieId = movie.id
@@ -39,5 +40,5 @@ struct columnView: View {
 }
 
 #Preview {
-    columnView(columnTitle: "Best Movie", intwidthh: 170, viewModel: HomeViewModel(), movieArray: mockMovieArray)
+    columnView(columnTitle: "Best Movie", intwidthh: 170, viewModel: HomeViewModel(), movieArray: mockMovieArray, accountViewModel: AccountViewModel())
 }

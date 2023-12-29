@@ -44,25 +44,33 @@ struct HomeView: View {
                     .cornerRadius(15)
                     
 
-                    columnView(columnTitle: "Now in Cinema",
+                    columnView(columnTitle: "🚨Now in Cinema",
                                intwidthh: 170,
                                viewModel: viewModel,
-                               movieArray: viewModel.nowMovies)
+                               movieArray: viewModel.nowMovies,
+                               accountViewModel: accountViewModel
+                    )
                     
-                    columnView(columnTitle: "Trending",
+                    columnView(columnTitle: "📈Trending",
                                intwidthh: 300,
                                viewModel: viewModel,
-                               movieArray: viewModel.trendingMovies)
+                               movieArray: viewModel.trendingMovies,
+                               accountViewModel: accountViewModel
+                    )
                     
-                    columnView(columnTitle: "Upcoming",
+                    columnView(columnTitle: "🔮Upcoming",
                                intwidthh: 170,
                                viewModel: viewModel,
-                               movieArray: viewModel.upcomingMovies)
+                               movieArray: viewModel.upcomingMovies,
+                               accountViewModel: accountViewModel
+                    )
                     
-                    columnView(columnTitle: "Top Movies",
+                    columnView(columnTitle: "⭐️Top Movies",
                                intwidthh: 300,
                                viewModel: viewModel,
-                               movieArray: viewModel.topMovies)
+                               movieArray: viewModel.topMovies,
+                               accountViewModel: accountViewModel
+                    )
                     
                 }
                 .padding(.top, 2)
@@ -75,8 +83,15 @@ struct HomeView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundColor(.white)
         }
-        .sheet(isPresented: $viewModel.isMovieViewActive) {
-            MovieView(viewModel: viewModel)
+        .fullScreenCover(isPresented: $viewModel.isMovieViewActive) {
+            MovieView(viewModel: viewModel, accountViewModel: accountViewModel)
+        }
+        .sheet(isPresented: $viewModel.isSeeMore) {
+            SeeMoreView(columnTitle: viewModel.columnTitle,
+                        movieArray: viewModel.movieArray,
+                        accountViewModel: accountViewModel,
+                        viewModel: viewModel
+            )
         }
         .onAppear{
             Task {

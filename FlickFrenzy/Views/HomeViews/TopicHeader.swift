@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct topicHeader: View {
+    @ObservedObject var viewModel: HomeViewModel
+    let movieArray: [MovieDetail]
     var title: String
     var body: some View {
         HStack{
@@ -19,6 +21,11 @@ struct topicHeader: View {
                 .font(.caption)
                 .fontWeight(.semibold)
                 .underline()
+                .onTapGesture {
+                    viewModel.columnTitle = title
+                    viewModel.movieArray = movieArray
+                    viewModel.isSeeMore = true
+                }
         }
         .padding(.horizontal)
         .padding(.top)
@@ -26,5 +33,5 @@ struct topicHeader: View {
 }
 
 #Preview {
-    topicHeader(title: "Best Movie")
+    topicHeader(viewModel: HomeViewModel(), movieArray: mockMovieArray, title: "Best Movie")
 }

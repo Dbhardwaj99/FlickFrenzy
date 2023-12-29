@@ -28,7 +28,13 @@ struct AccountView: View {
                         HStack {
                             Spacer()
                             ZStack{
-                                if let image = selectedImage {
+                                if let imageData = ViewModel.user.profileImage, let uiImage = UIImage(data: imageData) {
+                                    Image(uiImage: uiImage)
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                        .clipShape(Circle())
+                                        .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                                }else if let image = selectedImage {
                                     Image(uiImage: image)
                                         .resizable()
                                         .frame(width: 100, height: 100)
@@ -56,17 +62,29 @@ struct AccountView: View {
                             Spacer()
                         }
                         TextField("First Name", text: $ViewModel.user.firstName)
+                            .frame(height: 40)
+                            .font(.title2)
                         TextField("Last Name", text: $ViewModel.user.lastName)
+                            .frame(height: 40)
+                            .font(.title2)
                         TextField("Email", text: $ViewModel.user.email)
+                            .frame(height: 40)
+                            .font(.title2)
                             .autocapitalization(.none)
                             .keyboardType(.emailAddress)
                             .autocorrectionDisabled()
                         TextField("Address", text: $ViewModel.user.address)
+                            .frame(height: 40)
+                            .font(.title2)
                         DatePicker("Birthday",
                                    selection: $ViewModel.user.birthday,
                                    displayedComponents: .date)
+                        .frame(height: 40)
+                        .font(.title2)
                     }
                 }
+                .contentMargins(10)
+                .background(Color.clear)
                 .scrollContentBackground(.hidden)
                 Button(){
                     if let image = selectedImage{

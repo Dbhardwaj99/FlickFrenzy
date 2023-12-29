@@ -3,8 +3,9 @@ import SwiftUI
 final class AccountViewModel: ObservableObject{
     @AppStorage("user") private var userData: Data?
     @Published var alertItem: AlertItem?
+    @Published var showingAlert: Bool = false
     
-    @Published var user = User(watchList: [])
+    @Published var user = User()
     
     var isValidForm: Bool{
         guard !user.firstName.isEmpty && !user.lastName.isEmpty && !user.email.isEmpty && !user.address.isEmpty else {

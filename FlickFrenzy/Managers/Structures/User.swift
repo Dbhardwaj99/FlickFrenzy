@@ -13,7 +13,8 @@ struct User: Codable{
     var email = ""
     var address = ""
     var birthday = Date()
-    var watchList: [MovieDetailResponse]
+//    var watchList: [userFav] = mockUserFavArray
+    var watchList: [userFav] = []
     var profileImage: Data?
 }
 

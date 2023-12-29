@@ -13,30 +13,33 @@ struct FFTabView: View {
     @StateObject private var accountViewModel = AccountViewModel()
     
     var body: some View {
-        TabView{
-            Group{
-                HomeView(accountViewModel: accountViewModel, viewModel: viewModel)
-                    .tabItem {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                FavView()
-                    .tabItem {
-                        Image(systemName: "popcorn.fill")
-                        Text("Watchlist")
-                    }
-                
-                AccountView()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Account")
-                    }
+        ZStack{
+            Color("BGColor")
+                .ignoresSafeArea()
+            TabView{
+                Group{
+                    HomeView(accountViewModel: accountViewModel, viewModel: viewModel)
+                        .tabItem {
+                            Image(systemName: "house")
+                            Text("Home")
+                        }
+                    FavView(accountViewModel: accountViewModel, viewModel: viewModel)
+                        .tabItem {
+                            Image(systemName: "popcorn.fill")
+                            Text("Watchlist")
+                        }
+                    AccountView()
+                        .tabItem {
+                            Image(systemName: "person")
+                            Text("Account")
+                        }
+                }
+                .toolbarBackground(Color("BGColor"), for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
             }
-            .toolbarBackground(Color("BGColor"), for: .tabBar)
-            .toolbarBackground(.visible, for: .tabBar)
+            .accentColor(Color.white)
+            .navigationBarHidden(true)
         }
-        .accentColor(Color.white)
-        .navigationBarHidden(true)
     }
 }
 
