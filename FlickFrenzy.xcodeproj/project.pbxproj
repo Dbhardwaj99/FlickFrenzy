@@ -123,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				C121D7162B3C1B1500EA46C9 /* FlickFrenzyApp.swift */,
+				C18269BB2B3ECDAA005DC05B /* Models */,
 				C121D7542B3D867E00EA46C9 /* Views */,
 				C121D7502B3D862300EA46C9 /* Screens */,
 				C121D7532B3D865A00EA46C9 /* Network */,
@@ -160,12 +161,11 @@
 		C121D7502B3D862300EA46C9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C121D75B2B3DAE5C00EA46C9 /* Home Screen */,
 				C121D7182B3C1B1500EA46C9 /* ContentView.swift */,
+				C121D7462B3D552200EA46C9 /* FFTabView.swift */,
+				C121D75B2B3DAE5C00EA46C9 /* Home Screen */,
 				C121D7422B3D442900EA46C9 /* FavView.swift */,
 				C121D7442B3D443500EA46C9 /* AccountView.swift */,
-				C121D7462B3D552200EA46C9 /* FFTabView.swift */,
-				C18269B92B3E7FF7005DC05B /* MovieViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -184,6 +184,9 @@
 			isa = PBXGroup;
 			children = (
 				C121D74A2B3D818000EA46C9 /* CollageView.swift */,
+				C121D7602B3DEE0A00EA46C9 /* CastPreView.swift */,
+				C121D7592B3DAE5700EA46C9 /* MoviePreView.swift */,
+				C121D75C2B3DC4B900EA46C9 /* HomeScreenViews.swift */,
 				C121D7572B3D8AE900EA46C9 /* CollagePicView.swift */,
 			);
 			path = Views;
@@ -192,13 +195,18 @@
 		C121D75B2B3DAE5C00EA46C9 /* Home Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C121D7592B3DAE5700EA46C9 /* MoviePreView.swift */,
 				C121D7402B3D442200EA46C9 /* HomeView.swift */,
-				C121D75C2B3DC4B900EA46C9 /* HomeScreenViews.swift */,
 				C121D75E2B3DD3E900EA46C9 /* MovieView.swift */,
-				C121D7602B3DEE0A00EA46C9 /* CastPreView.swift */,
 			);
 			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		C18269BB2B3ECDAA005DC05B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C18269B92B3E7FF7005DC05B /* MovieViewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
