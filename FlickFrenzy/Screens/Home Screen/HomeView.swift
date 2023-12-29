@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var accountViewModel: AccountViewModel
     @ObservedObject var viewModel: HomeViewModel
     @State var searchText: String = ""
     
@@ -21,7 +22,7 @@ struct HomeView: View {
                     
                 }
                 ScrollView{
-                    Header()
+                    Header(accountViewModel: accountViewModel)
                     HStack {
                         TextField("Search", text: $searchText)
                             .foregroundStyle(Color.white)
@@ -81,13 +82,14 @@ struct HomeView: View {
             Task {
                 await viewModel.fetchMoviesAndDetails()
             }
+            accountViewModel.retriveUser()
         }
     }
 }
 
 
 #Preview {
-    HomeView(viewModel: HomeViewModel())
+    HomeView(accountViewModel: AccountViewModel(), viewModel: HomeViewModel())
 }
 
 

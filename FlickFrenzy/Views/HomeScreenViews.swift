@@ -18,23 +18,40 @@ struct HomeScreenViews: View {
 }
 
 struct Header: View {
+    @ObservedObject var accountViewModel: AccountViewModel
+    
     var body: some View {
-        HStack(spacing: 20){
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50, alignment: .leading)
+        HStack{
+            if let imageData = accountViewModel.user.profileImage, let uiImage = UIImage(data: imageData) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .clipShape(Circle())
+                    .overlay(Circle().stroke(Color.white, lineWidth: 2))
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 80, height: 80, alignment: .leading)
+            } else {
+                Image("Blank")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(60)
+                    .frame(width: 80, height: 80, alignment: .leading)
+            }
+            
+//            Image(systemName: "person.circle.fill")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 50, height: 50, alignment: .leading)
             VStack(alignment: .leading){
                 Text("Welcome back,")
-                Text("Divyansh Bhardwaj")
+                Text(accountViewModel.user.firstName.isEmpty ? "User" : accountViewModel.user.firstName)
                     .font(.title2)
                     .fontWeight(.bold)
             }
             Spacer()
-            Image(systemName: "bell.badge.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40, alignment: .trailing)
+//            Image(systemName: "bell.badge.fill")
+//                .resizable()
+//                .aspectRatio(contentMode: .fit)
+//                .frame(width: 40, height: 40, alignment: .trailing)
         }
         .padding(.all)
     }
