@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var searchText = ""
-    @State var topMovies: [MovieDetail] = []
-    @State var nowMovies: [MovieDetail] = []
-    @State var upcomingMovies: [MovieDetail] = []
+    @ObservedObject var viewModel: HomeViewModel
+    @State var searchText: String = ""
     
     var body: some View {
         ZStack{
             Color("BGColor")
                 .ignoresSafeArea()
+            
             VStack{
                 HStack(spacing: 5){
                     
@@ -43,30 +42,52 @@ struct HomeView: View {
                     .background(Color("ColorPrimary"))
                     .cornerRadius(15)
                     
-                    columnView(columnTitle: "Now in Cinema", intwidthh: 170, movies: nowMovies)
-                    columnView(columnTitle: "Trending", intwidthh: 300, movies: topMovies)
-                    columnView(columnTitle: "Upcoming", intwidthh: 300, movies: upcomingMovies)
+
+                    columnView(columnTitle: "Now in Cinema",
+                               intwidthh: 170,
+                               viewModel: viewModel,
+                               movieArray: viewModel.nowMovies)
+                    
+                    columnView(columnTitle: "Trending",
+                               intwidthh: 300,
+                               viewModel: viewModel,
+                               movieArray: viewModel.trendingMovies)
+                    
+                    columnView(columnTitle: "Upcoming",
+                               intwidthh: 170,
+                               viewModel: viewModel,
+                               movieArray: viewModel.upcomingMovies)
+                    
+                    columnView(columnTitle: "Top Movies",
+                               intwidthh: 300,
+                               viewModel: viewModel,
+                               movieArray: viewModel.topMovies)
+                    
                 }
                 .padding(.top, 2)
             }
             .task {
                 do{
-                    topMovies = try await getMovies(value: 4)
-                    nowMovies = try await getMovies(value: 2)
-                    upcomingMovies = try await getMovies(value: 3)
-                    //                        movies = mockMovieArray
-                }  catch {
-                    print("Error fetching movies: \(error)")
-                }
+                    await viewModel.fetchMoviesAndDetails()
+                } 
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .foregroundColor(.white)
+        }
+        .sheet(isPresented: $viewModel.isMovieViewActive) {
+            MovieView(viewModel: viewModel)
+        }
+        .onAppear{
+            Task {
+                await viewModel.fetchMoviesAndDetails()
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .foregroundColor(.white)
     }
 }
 
+
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }
 
 

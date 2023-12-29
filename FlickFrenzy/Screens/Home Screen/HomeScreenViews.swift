@@ -14,7 +14,7 @@ struct HomeScreenViews: View {
 }
 
 #Preview {
-    columnView(columnTitle: "popular", intwidthh: 200, movies: mockMovieArray)
+    castColumnView(casts: mockCastDetailArray)
 }
 
 struct Header: View {
@@ -43,33 +43,67 @@ struct Header: View {
 struct columnView: View {
     let columnTitle: String
     let intwidthh: CGFloat
-    let movies: [MovieDetail]
+    @ObservedObject var viewModel: HomeViewModel
+    let movieArray: [MovieDetail]
     
     var body: some View {
         VStack {
-            HStack{
-                Text(columnTitle)
-                    .font(.title)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                Spacer()
-                Text("See all")
-                    .font(.caption)
-                    .fontWeight(.semibold)
-                    .underline()
-            }
-            .padding(.horizontal)
-            .padding(.top)
+            topicHeader(title: columnTitle)
             
             ScrollView(.horizontal) {
                 LazyHStack(alignment: .top) {
-                    ForEach(movies) { movie in
+                    ForEach(movieArray) { movie in
                         MoviePreView(intwidthh: intwidthh, movie: movie)
                             .id(movie.movieid)
+                            .onTapGesture {
+                                viewModel.selectedMovieId = movie.id
+                                viewModel.isMovieViewActive = true
+                                Task {
+                                    await viewModel.fetchMoviesAndDetails()
+                                }
+                            }
                     }
                 }
                 .frame(height: 200)
                 .padding(.horizontal)
             }
         }
+    }
+}
+
+struct castColumnView: View {
+    let casts: [CastDetail]
+    
+    var body: some View {
+        VStack {
+            ScrollView(.horizontal) {
+                LazyHStack(alignment: .top) {
+                    ForEach(casts) { cast in
+                        CastPreView(cast: cast)
+                            .id(cast.id)
+                    }
+                }
+                .frame(height: 300)
+                .padding(.horizontal)
+            }
+        }
+    }
+}
+
+struct topicHeader: View {
+    var title: String
+    var body: some View {
+        HStack{
+            Text(title)
+                .font(.title2)
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            Spacer()
+            Text("See all")
+                .font(.caption)
+                .fontWeight(.semibold)
+                .underline()
+        }
+        .padding(.horizontal)
+        .padding(.top)
     }
 }

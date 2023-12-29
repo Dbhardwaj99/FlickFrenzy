@@ -9,11 +9,12 @@ import SwiftUI
 
 struct FFTabView: View {
 //    @Published var isTabViewShowing = true
+    @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         TabView{
             Group{
-                HomeView()
+                HomeView(viewModel: viewModel)
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")

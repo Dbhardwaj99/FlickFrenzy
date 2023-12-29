@@ -144,3 +144,24 @@ let mockMovieArray: [MovieDetail] = [
         voteCount: 19192
     )
 ]
+
+
+
+let mockCastDetailArray: [CastDetail] = [
+    CastDetail(adult: false,
+               gender: 2,
+               id: 819,
+               knownForDepartment: "Acting",
+               name: "Edward Norton",
+               originalName: "Edward Norton",
+               popularity: 26.99,
+               profilePath: "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg",
+               castId: 4,
+               character: "The Narrator",
+               creditId: "52fe4250c3a36847f80149f3",
+               order: 0
+              ),
+    CastDetail(adult: false, gender: 2, id: 287, knownForDepartment: "Acting", name: "Brad Pitt", originalName: "Brad Pitt", popularity: 45.202, profilePath: "/huV2cdcolEUwJy37QvH914vup7d.jpg", castId: 5, character: "Tyler Durden", creditId: "52fe4250c3a36847f80149f7", order: 1)
+]
+
+let mockCastDetail = CastDetail(adult: false, gender: 2, id: 819, knownForDepartment: "Acting", name: "Edward Norton", originalName: "Edward Norton", popularity: 26.99, profilePath: "/8nytsqL59SFJTVYVrN72k6qkGgJ.jpg", castId: 4, character: "The Narrator", creditId: "52fe4250c3a36847f80149f3", order: 0)

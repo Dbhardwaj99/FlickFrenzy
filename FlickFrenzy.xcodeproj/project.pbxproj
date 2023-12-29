@@ -26,6 +26,8 @@
 		C121D75A2B3DAE5700EA46C9 /* MoviePreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7592B3DAE5700EA46C9 /* MoviePreView.swift */; };
 		C121D75D2B3DC4B900EA46C9 /* HomeScreenViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D75C2B3DC4B900EA46C9 /* HomeScreenViews.swift */; };
 		C121D75F2B3DD3E900EA46C9 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D75E2B3DD3E900EA46C9 /* MovieView.swift */; };
+		C121D7612B3DEE0A00EA46C9 /* CastPreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C121D7602B3DEE0A00EA46C9 /* CastPreView.swift */; };
+		C18269BA2B3E7FF7005DC05B /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18269B92B3E7FF7005DC05B /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		C121D7592B3DAE5700EA46C9 /* MoviePreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreView.swift; sourceTree = "<group>"; };
 		C121D75C2B3DC4B900EA46C9 /* HomeScreenViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViews.swift; sourceTree = "<group>"; };
 		C121D75E2B3DD3E900EA46C9 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		C121D7602B3DEE0A00EA46C9 /* CastPreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastPreView.swift; sourceTree = "<group>"; };
+		C18269B92B3E7FF7005DC05B /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +165,7 @@
 				C121D7422B3D442900EA46C9 /* FavView.swift */,
 				C121D7442B3D443500EA46C9 /* AccountView.swift */,
 				C121D7462B3D552200EA46C9 /* FFTabView.swift */,
+				C18269B92B3E7FF7005DC05B /* MovieViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				C121D7402B3D442200EA46C9 /* HomeView.swift */,
 				C121D75C2B3DC4B900EA46C9 /* HomeScreenViews.swift */,
 				C121D75E2B3DD3E900EA46C9 /* MovieView.swift */,
+				C121D7602B3DEE0A00EA46C9 /* CastPreView.swift */,
 			);
 			path = "Home Screen";
 			sourceTree = "<group>";
@@ -331,10 +337,12 @@
 				C121D74D2B3D844800EA46C9 /* Structures.swift in Sources */,
 				C121D75A2B3DAE5700EA46C9 /* MoviePreView.swift in Sources */,
 				C121D7582B3D8AE900EA46C9 /* CollagePicView.swift in Sources */,
+				C121D7612B3DEE0A00EA46C9 /* CastPreView.swift in Sources */,
 				C121D7412B3D442200EA46C9 /* HomeView.swift in Sources */,
 				C121D7472B3D552200EA46C9 /* FFTabView.swift in Sources */,
 				C121D7492B3D6C4300EA46C9 /* NetworkManager.swift in Sources */,
 				C121D75F2B3DD3E900EA46C9 /* MovieView.swift in Sources */,
+				C18269BA2B3E7FF7005DC05B /* MovieViewModel.swift in Sources */,
 				C121D7192B3C1B1500EA46C9 /* ContentView.swift in Sources */,
 				C121D7172B3C1B1500EA46C9 /* FlickFrenzyApp.swift in Sources */,
 				C121D74B2B3D818000EA46C9 /* CollageView.swift in Sources */,

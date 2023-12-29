@@ -44,7 +44,7 @@ func getMovies(value: Int) async throws -> [MovieDetail] {
     do {
         let movieResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
         let movies = movieResponse.results
-        processMovies(movies: movies)
+//        processMovies(movies: movies)
         return movies
     } catch {
         print("Decoding error: \(error)")
@@ -52,8 +52,8 @@ func getMovies(value: Int) async throws -> [MovieDetail] {
     }
 }
 
-func getNowMovies() async throws -> [MovieDetail] {
-    let endpoint = "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1"
+func getMovieDetail(value: Int) async throws -> MovieDetailResponse {
+    let endpoint = "https://api.themoviedb.org/3/movie/\(value)?language=en-US"
     
     guard let url = URL(string: endpoint) else {
         throw MovieError.invalidURL
@@ -71,18 +71,16 @@ func getNowMovies() async throws -> [MovieDetail] {
     }
     
     do {
-        let movieResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
-        let movies = movieResponse.results
-        processMovies(movies: movies)
-        return movies
+        let movieResponse = try JSONDecoder().decode(MovieDetailResponse.self, from: data)
+        return movieResponse
     } catch {
         print("Decoding error: \(error)")
         throw MovieError.invalidData
     }
 }
 
-func getUpcomingMovies() async throws -> [MovieDetail] {
-    let endpoint = "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1"
+func getMovieCast(value: Int) async throws -> [CastDetail] {
+    let endpoint = "https://api.themoviedb.org/3/movie/\(value)/credits?language=en-US"
     
     guard let url = URL(string: endpoint) else {
         throw MovieError.invalidURL
@@ -98,17 +96,19 @@ func getUpcomingMovies() async throws -> [MovieDetail] {
     guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
         throw MovieError.invalidResponse
     }
+    print(data)
     
     do {
-        let movieResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
-        let movies = movieResponse.results
-        processMovies(movies: movies)
-        return movies
+        let castResponse = try JSONDecoder().decode(MovieCastResponse.self, from: data)
+        let casts = castResponse.cast
+        return casts
     } catch {
         print("Decoding error: \(error)")
         throw MovieError.invalidData
     }
 }
+
+
 
 func processMovies(movies: [MovieDetail]) {
     for movie in movies {
