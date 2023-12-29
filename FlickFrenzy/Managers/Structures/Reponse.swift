@@ -1,11 +1,20 @@
 //
-//  Structures.swift
+//  Reponse.swift
 //  FlickFrenzy
 //
-//  Created by Divyansh Bhardwaj on 28/12/23.
+//  Created by Divyansh Bhardwaj on 29/12/23.
 //
 
 import Foundation
+
+struct MovieCastResponse: Codable {
+    let id: Int
+    let cast: [CastDetail]
+    
+    private enum CodingKeys: String, CodingKey {
+        case id, cast
+    }
+}
 
 struct MovieResponse: Codable {
     let page: Int
@@ -84,72 +93,41 @@ struct MovieDetailResponse: Codable {
     }
 }
 
-struct MovieDetail: Codable, Identifiable {
-    let movieid = UUID()
-    let adult: Bool
-    let backdropPath: String?
-    let genreIds: [Int]
-    let id: Int
-    let originalLanguage: String
-    let originalTitle: String
-    let overview: String
-    let popularity: Double
-    let posterPath: String?
-    let releaseDate: String
-    let title: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
-    
-    private enum CodingKeys: String, CodingKey {
-        case adult, id, overview, popularity, title, video
-        case backdropPath = "backdrop_path"
-        case genreIds = "genre_ids"
-        case originalLanguage = "original_language"
-        case originalTitle = "original_title"
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
-    }
-}
 
-struct MovieCastResponse: Codable {
-    let id: Int
-    let cast: [CastDetail]
-    
-    private enum CodingKeys: String, CodingKey {
-        case id, cast
-    }
-}
-
-struct CastDetail: Codable, Identifiable {
-    let adult: Bool
-    let gender: Int
-    let id: Int
-    let knownForDepartment: String
-    let name: String
-    let originalName: String
-    let popularity: Double
-    let profilePath: String?
-    let castId: Int
-    let character: String
-    let creditId: String
-    let order: Int
-
-    private enum CodingKeys: String, CodingKey {
-        case adult, gender, id, name, character, order
-        case knownForDepartment = "known_for_department"
-        case originalName = "original_name"
-        case popularity, profilePath = "profile_path"
-        case castId = "cast_id"
-        case creditId = "credit_id"
-    }
-}
-
-
-enum MovieError: Error {
-    case invalidURL
-    case invalidResponse
-    case invalidData
-}
+let mockMovieDetailResponses = MovieDetailResponse(
+        adult: false,
+        backdropPath: "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+        budget: 63000000,
+        genres: [
+            MovieDetailResponse.Genre(id: 18, name: "Drama"),
+            MovieDetailResponse.Genre(id: 53, name: "Thriller"),
+            MovieDetailResponse.Genre(id: 35, name: "Comedy")
+        ],
+        homepage: "http://www.foxmovies.com/movies/fight-club",
+        id: 550,
+        imdbId: "tt0137523",
+        originalLanguage: "en",
+        originalTitle: "Fight Club",
+        overview: "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+        popularity: 61.416,
+        posterPath: "/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+        productionCompanies: [
+            MovieDetailResponse.ProductionCompany(id: 508, logoPath: "/7cxRWzi4LsVm4Utfpr1hfARNurT.png", name: "Regency Enterprises", originCountry: "US"),
+            MovieDetailResponse.ProductionCompany(id: 711, logoPath: "/tEiIH5QesdheJmDAqQwvtN60727.png", name: "Fox 2000 Pictures", originCountry: "US"),
+        ],
+        productionCountries: [
+            MovieDetailResponse.ProductionCountry(iso31661: "US", name: "United States of America")
+        ],
+        releaseDate: "1999-10-15",
+        revenue: 100853753,
+        runtime: 139,
+        spokenLanguages: [
+            MovieDetailResponse.SpokenLanguage(englishName: "English", iso6391: "en", name: "English")
+        ],
+        status: "Released",
+        tagline: "Mischief. Mayhem. Soap.",
+        title: "Fight Club",
+        video: false,
+        voteAverage: 8.433,
+        voteCount: 26280
+)

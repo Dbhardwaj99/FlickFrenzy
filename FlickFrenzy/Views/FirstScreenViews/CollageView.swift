@@ -24,9 +24,6 @@ struct CollageView: View {
             ForEach(movies.chunked(into: 3), id: \.first?.movieid) { chunk in
                 CollagePicView(movies: chunk)
             }
-//            CollagePicView(movies: movies)
-//            CollagePicView(movies: movies)
-//            CollagePicView(movies: movies)
         }
         .frame(width: 400, height: 500)
         .clipShape(Rectangle())
